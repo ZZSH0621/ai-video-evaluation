@@ -1,0 +1,18 @@
+# Cloudflare Worker: OSS 动态签名 URL 代理
+name = "oss-video-proxy"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# 路由: 生产环境绑定到自定义域名或 workers.dev 子域名
+# 部署后 URL: https://oss-video-proxy.<your-subdomain>.workers.dev
+
+# OSS 凭证通过 Worker Secrets 设置 (不写入代码):
+#   npx wrangler secret put OSS_ACCESS_KEY_ID
+#   npx wrangler secret put OSS_ACCESS_KEY_SECRET
+#   (可选) npx wrangler secret put OSS_BUCKET       # 默认: 96vedio
+#   (可选) npx wrangler secret put OSS_ENDPOINT     # 默认: oss-cn-beijing.aliyuncs.com
+
+[vars]
+# 非敏感配置可以写在这里 (secrets 中同名的 env var 会覆盖)
+# OSS_BUCKET = "96vedio"
+# OSS_ENDPOINT = "oss-cn-beijing.aliyuncs.com"
