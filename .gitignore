@@ -3,7 +3,12 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Node
+node_modules/
+
 # Temp files
+_temp.js
+_temp_obf.js
 video_map_output.txt
 *.tmp
 
