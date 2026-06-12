@@ -6,8 +6,9 @@ html_path = r'F:\AI\新的网站\index.html'
 # ============================================================
 # 控制开关 (休眠 = True, 启用 = False)
 # ============================================================
-SKIP_PROTECT = True   # True=休眠反制(右键/键盘/录屏/水印), False=启用
-SKIP_OVERLAY = True   # True=休眠赛博加载动画, False=启用
+SKIP_PROTECT = True    # True=休眠反制(右键/键盘/录屏/水印), False=启用
+SKIP_OVERLAY = True    # True=休眠赛博加载动画, False=启用
+SKIP_OBFUSCATE = True  # True=跳过JS混淆(调试用), False=启用
 
 with open(html_path, 'r', encoding='utf-8') as f:
     html = f.read()
@@ -353,39 +354,45 @@ js_code = html[js_start:script_end - len('</script>')].strip()
 
 print(f'Step 3: Extracted main JS ({len(js_code)} chars)')
 
-# Obfuscate
-js_file = r'F:\AI\新的网站\_temp.js'
-with open(js_file, 'w', encoding='utf-8') as f:
-    f.write(js_code)
+# Obfuscate (可跳过 - SKIP_OBFUSCATE=True 时保留原始 JS)
+if not SKIP_OBFUSCATE:
+    js_file = r'F:\AI\新的网站\_temp.js'
+    with open(js_file, 'w', encoding='utf-8') as f:
+        f.write(js_code)
 
-npx_path = shutil.which('npx') or shutil.which('npx.cmd')
-for p in [r'C:\Program Files\nodejs\npx.cmd']:
-    if os.path.exists(p):
-        npx_path = p
-        break
+    npx_path = shutil.which('npx') or shutil.which('npx.cmd')
+    for p in [r'C:\Program Files\nodejs\npx.cmd']:
+        if os.path.exists(p):
+            npx_path = p
+            break
 
-obf_file = r'F:\AI\新的网站\_temp_obf.js'
-cmd = [
-    npx_path, 'javascript-obfuscator', js_file,
-    '--output', obf_file,
-    '--compact', 'true',
-    '--string-array', 'true',
-    '--string-array-encoding', 'base64',
-    '--string-array-threshold', '0.5',
-    '--identifier-names-generator', 'hexadecimal',
-    '--rename-globals', 'false',
-]
+    obf_file = r'F:\AI\新的网站\_temp_obf.js'
+    cmd = [
+        npx_path, 'javascript-obfuscator', js_file,
+        '--output', obf_file,
+        '--compact', 'true',
+        '--string-array', 'true',
+        '--string-array-encoding', 'base64',
+        '--string-array-threshold', '0.5',
+        '--identifier-names-generator', 'hexadecimal',
+        '--rename-globals', 'false',
+    ]
 
-print('Step 4: Obfuscating...')
-result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
-if result.returncode != 0:
-    print(f'Error: {result.stderr[-500:]}')
-    exit(1)
+    print('Step 4: Obfuscating...')
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+    if result.returncode != 0:
+        print(f'Error: {result.stderr[-500:]}')
+        exit(1)
 
-with open(obf_file, 'r', encoding='utf-8') as f:
-    obf_js = f.read()
+    with open(obf_file, 'r', encoding='utf-8') as f:
+        obf_js = f.read()
 
-print(f'Obfuscated: {len(js_code)} -> {len(obf_js)} chars')
+    print(f'Obfuscated: {len(js_code)} -> {len(obf_js)} chars')
+    os.remove(js_file)
+    os.remove(obf_file)
+else:
+    obf_js = js_code
+    print('Step 4: Obfuscation SKIPPED (SKIP_OBFUSCATE=True)')
 
 # Replace main script with obfuscated version
 new_html = html[:js_start] + '\n' + obf_js + '\n' + html[script_end - len('</script>'):]
@@ -395,9 +402,6 @@ new_html = new_html.replace('<!DOCTYPE html>', '<!DOCTYPE html>\n<!-- PROTECT_PR
 
 with open(html_path, 'w', encoding='utf-8') as f:
     f.write(new_html)
-
-os.remove(js_file)
-os.remove(obf_file)
 
 # Final check - 不应再有任何 OSS 凭证泄漏
 checks = {
