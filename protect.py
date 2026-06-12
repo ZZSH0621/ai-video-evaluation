@@ -7,7 +7,7 @@ html_path = r'F:\AI\新的网站\index.html'
 # 控制开关 (休眠 = True, 启用 = False)
 # ============================================================
 SKIP_PROTECT = True   # True=休眠反制(右键/键盘/录屏/水印), False=启用
-SKIP_OVERLAY = False  # True=休眠赛博加载动画, False=启用
+SKIP_OVERLAY = True   # True=休眠赛博加载动画, False=启用
 
 with open(html_path, 'r', encoding='utf-8') as f:
     html = f.read()
