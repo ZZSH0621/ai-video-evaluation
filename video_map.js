@@ -3,154 +3,154 @@
 const VIDEO_MAP = {
   "ViduQ3": {
     "AI漫剧": [
-      "96/ViduQ3/AI短剧/AI短剧-3D-简单.mp4",
-      "96/ViduQ3/AI短剧/AI短剧-3D-困难.mp4",
-      "96/ViduQ3/AI短剧/AI短剧-真人-简单.mp4",
-      "96/ViduQ3/AI短剧/AI短剧-真人-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=qZDqmSKot1XRHEa7sT2XYb7jjxM%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=cyuY7sEeAzSt788JqJTcinQ0AMk%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=%2Be%2B9Vsko%2B5343u3J8l5zClzED%2BA%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=kLP8wNPs8RX48tYIYbkbyf5BAUI%3D"
     ],
     "体育运动": [
-      "96/ViduQ3/体育运动/体育运动-举重-简单.mp4",
-      "96/ViduQ3/体育运动/体育运动-举重-困难.mp4",
-      "96/ViduQ3/体育运动/体育运动-篮球-简单.mp4",
-      "96/ViduQ3/体育运动/体育运动-篮球-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=j6Q5BnNXE1gLrQ7L8%2F63sadmRRY%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=MlocvdHAnF1uLQKIePQaR9ac4s4%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=eYeVZzjOqu6Z5NA3gXAakJwjB7g%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=g%2BUYicHtrEHZ5iRSIPSpVRian7c%3D"
     ],
     "广告": [
-      "96/ViduQ3/广告/广告-汽车-简单.mp4",
-      "96/ViduQ3/广告/广告-汽车-困难.mp4",
-      "96/ViduQ3/广告/广告-红牛-简单.mp4",
-      "96/ViduQ3/广告/广告-红牛-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=n7T%2B36%2BUzEykhoq1U8lhYjyLKWA%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=opvMxmApA5Tn9zYrO5sqIUzFkgM%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E7%BA%A2%E7%89%9B-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=8qo%2BKMcXapnZ08%2FFaa8M72INm3s%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E7%BA%A2%E7%89%9B-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=QV5QE%2BDbltKF%2F0AI9wdk090uo3I%3D"
     ],
     "特效": [
-      "96/ViduQ3/特效/特效-现实场景元素-简单.mp4",
-      "96/ViduQ3/特效/特效-现实场景元素--困难.mp4",
-      "96/ViduQ3/特效/特效--电影-简单.mp4",
-      "96/ViduQ3/特效/特效--电影-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=4yRFL2oEvGXYH8jgcr6vI6V%2F%2BB0%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=11bA7AiD6%2FtVGPGqy90Waeh4ALE%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88--%E7%94%B5%E5%BD%B1-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=QKs6EckHAYkSQgIm64Kr9gEAvYA%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88--%E7%94%B5%E5%BD%B1-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=WVo%2FY%2BFptprsRGQyWblAkrnbjoY%3D"
     ],
     "直播带货": [
-      "96/ViduQ3/直播/直播-数码-简单.mp4",
-      "96/ViduQ3/直播/直播-数码-困难.mp4",
-      "96/ViduQ3/直播/直播-美妆-简单.mp4",
-      "96/ViduQ3/直播/直播-美妆-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ITvP4Ku1W7ZNEJmpiUqMPfIfzYM%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=f3ya%2BGbXZJ5jZVgGzkwXgI7Y4tQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=s4uBOz6xUi%2FtLZO8wA7o5g1eKcI%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=nNKkn42Kf3QHU8T1%2Bwjk414CZbs%3D"
     ],
     "音乐": [
-      "96/ViduQ3/音乐/音乐-mv-简单.mp4",
-      "96/ViduQ3/音乐/音乐-mv-困难.mp4",
-      "96/ViduQ3/音乐/音乐-现场-简单.mp4",
-      "96/ViduQ3/音乐/音乐-现场-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=KqU1gSfkX93qbCV07UIWfDdcI%2BQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=TL5xZJ%2FrhAd3JjIQcpVPUZMsWqw%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=EsQD7V4PjInLvkbp%2B911ydPtlAg%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2FViduQ3%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=fDNHpTwdldypNvByLpqjubNaBYw%3D"
     ]
   },
   "即梦": {
     "AI漫剧": [
-      "96/即梦/AI短剧/AI短剧-3D-简单.mp4",
-      "96/即梦/AI短剧/AI短剧-3D-困难%20.mp4",
-      "96/即梦/AI短剧/AI短剧-真人-简单%20.mp4",
-      "96/即梦/AI短剧/AI短剧-真人-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ae6TmbFURRc0E6aPmvwrHE6DKyY%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E5%9B%B0%E9%9A%BE%20.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796600&Signature=A945afWyIrUyjAggTDU%2FRpQGjvE%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E7%AE%80%E5%8D%95%20.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796600&Signature=Z578vKrtJ3OwM36DO9A0OcVGAEA%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=NZBXpaPVRjYSP3RWVtf7JQJCZbg%3D"
     ],
     "体育运动": [
-      "96/即梦/体育运动/体育运动-举重-简单-.mp4",
-      "96/即梦/体育运动/体育运动-举重-困难.mp4",
-      "96/即梦/体育运动/体育运动-篮球-简单.mp4",
-      "96/即梦/体育运动/体育运动-篮球-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D-%E7%AE%80%E5%8D%95-.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=2SFcUBd4p8GeHNV3lsjBE6Fw2YQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=n4YssZSdwSV%2BDCOHJLBtLxtHf1k%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=cLPeafeFd0to9WOBbLrp21dSPH4%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=27eountEKwAorhjwfGZ78HvATEE%3D"
     ],
     "广告": [
-      "96/即梦/广告/广告-汽车-简单%20.mp4",
-      "96/即梦/广告/广告-汽车-困难.mp4",
-      "96/即梦/广告/广告-饮品-简单%20.mp4",
-      "96/即梦/广告/广告-饮品-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E7%AE%80%E5%8D%95%20.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796600&Signature=QYYuISFzvejXNIyFJM57EbgezEQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ONuuSOM4qH53Emmwdd5airK1u5w%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E9%A5%AE%E5%93%81-%E7%AE%80%E5%8D%95%20.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796600&Signature=MN%2BCNp5873TvQGANraiOnBdLfxU%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E9%A5%AE%E5%93%81-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ftnH3T64LtLHU6vTtTc2V2CyYsA%3D"
     ],
     "特效": [
-      "96/即梦/特效/特效-现实场景元素-简单.mp4",
-      "96/即梦/特效/特效-现实场景元素-困难.mp4",
-      "96/即梦/特效/特效-电影--简单.mp4",
-      "96/即梦/特效/特效-电影-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=sdrZcqG2wbTd4IxryPAiaQW1pa4%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=mjydkn0t%2FgCywugxhTVW%2BFXWFYI%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%94%B5%E5%BD%B1--%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=hc9xyG6L1lmmhQqk%2B6rcgtX8NMk%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%94%B5%E5%BD%B1-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=aMFnOxIN80%2FNpEsIp%2B5drWdiNtA%3D"
     ],
     "直播带货": [
-      "96/即梦/直播/直播-数码-简单.mp4",
-      "96/即梦/直播/直播--数码--困难.mp4",
-      "96/即梦/直播/直播-美妆-简单%20.mp4",
-      "96/即梦/直播/直播-美妆-%20困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=QxnAQT%2FL2zCetYJqCXoOyDPypls%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD--%E6%95%B0%E7%A0%81--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=XSFWWT9TVlPBB4qLCdZOvKHiShI%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E7%AE%80%E5%8D%95%20.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796600&Signature=jLgdlawR3VQj4g0OF0f8YRXWyNc%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%20%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796600&Signature=J0IfwjHQXBwPGSebzEdNxu76yu4%3D"
     ],
     "音乐": [
-      "96/即梦/音乐/音乐-mv简单.mp4",
-      "96/即梦/音乐/音乐-mv困难.mp4",
-      "96/即梦/音乐/音乐-现场-简单.mp4",
-      "96/即梦/音乐/音乐--现场-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ClwBBL0OlgBn1Jk6c0SQsz7EAI4%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=rrx3%2Fo4mEPC6PphZArFX9VkTmlw%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=3fMd8vEOpdH%2B%2FxPf7Gx%2FcDK1dKc%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8D%B3%E6%A2%A6%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90--%E7%8E%B0%E5%9C%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=x8h0i0Zy8qY%2BOoDa%2F4VayrsEn8A%3D"
     ]
   },
   "可灵": {
     "AI漫剧": [
-      "96/可灵/AI短剧/AI短剧-3D-简单.mp4",
-      "96/可灵/AI短剧/AI短剧-3D-困难.mp4",
-      "96/可灵/AI短剧/AI短剧-真人-简单.mp4",
-      "96/可灵/AI短剧/AI短剧-真人-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=Nj85dn%2BX%2FPva8TEEIf2PiL0hxdg%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=mKjTUxtWp4F1j1QNYQESV6YADZ4%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ZzX4oIPOZEXZha3XPCvcH4K9ap8%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=Bb4PyTiGdVA8D6hPSsQ5krfeyVg%3D"
     ],
     "体育运动": [
-      "96/可灵/体育运动/体育运动-举重-简单.mp4",
-      "96/可灵/体育运动/体育运动-举重-困难.mp4",
-      "96/可灵/体育运动/体育运动-篮球-简单.mp4",
-      "96/可灵/体育运动/体育运动-篮球-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=9L3aKq%2BlTHQjp6qHHwrYQP%2BDyuI%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=1FPtY1uSbfqdto4L6HhtQZ2GHPc%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=%2FGX6rgi4sTlHeqASqxADKwLZhQs%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=04Z29eFZRs19UHYN2go4SanVTPQ%3D"
     ],
     "广告": [
-      "96/可灵/广告/广告-汽车-简单.mp4",
-      "96/可灵/广告/广告-汽车-困难.mp4",
-      "96/可灵/广告/广告-饮品-简单.mp4",
-      "96/可灵/广告/广告-饮品-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=Kh2qfyRL1Og7%2FowPbGgBvPV11sE%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=uWiBMhFbo8BcymrY8d4LMGkijl8%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E9%A5%AE%E5%93%81-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=EOPcm1mASmU2uAgM%2BoJBpSdQh%2Bo%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E9%A5%AE%E5%93%81-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ZiOEptTPB47rYAcnfQZ5AdXzbEg%3D"
     ],
     "特效": [
-      "96/可灵/特效/特效-现实场景元素-简单.mp4",
-      "96/可灵/特效/特效-现实场景元素-困难.mp4",
-      "96/可灵/特效/特效-电影-简单.mp4",
-      "96/可灵/特效/特效--电影--困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=gsuzdEeFdZhaPV%2Fbvj3uiD8nyFA%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=AXT9NzZjcYHODoDCXSdfABae93o%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%94%B5%E5%BD%B1-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=07y4guNEX%2Fx3ykOfq6x9fcHlMOQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88--%E7%94%B5%E5%BD%B1--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=autKqk9WCPNh7aU9YBgyDnNj1dM%3D"
     ],
     "直播带货": [
-      "96/可灵/直播/直播-数码-简单.mp4",
-      "96/可灵/直播/直播-数码-困难.mp4",
-      "96/可灵/直播/直播-美妆-简单.mp4",
-      "96/可灵/直播/直播-美妆-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=SRmxyfs%2BwayuRxOyfgRmcxQVdm8%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=UJLG2di7uSVR5rG6CkkwfjVkzDU%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=fJXZK7m7i2LAA7tUqSDPgpcPZnM%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=kvjan41bp9Eic0DVS5qRoLduqEY%3D"
     ],
     "音乐": [
-      "96/可灵/音乐/音乐-mv-简单.mp4",
-      "96/可灵/音乐/音乐-mv--困难.mp4",
-      "96/可灵/音乐/音乐-现场-简单.mp4",
-      "96/可灵/音乐/音乐-现场-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=5w%2BGWUVVlcQBcg6BPugqASuoaCo%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=kRUjcFIQhHPoAN%2F2cRktbGX5KUI%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=gVt%2FVIMyYnYF73V%2FBi%2FNf71C42M%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E5%8F%AF%E7%81%B5%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=nLb%2Fpy1nxikkTPsNwxShdlxzne8%3D"
     ]
   },
   "Gemini Veo": {
     "AI漫剧": [
-      "96/谷歌veo/AI短剧/AI短剧-3D-简单.mp4",
-      "96/谷歌veo/AI短剧/AI短剧-3D-困难.mp4",
-      "96/谷歌veo/AI短剧/AI短剧-真人-简单.mp4",
-      "96/谷歌veo/AI短剧/AI短剧-真人-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=jWCETIb9ItDn2gLAZHTJkW0SNpg%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-3D-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=BcEy1e%2FkXtIE197U0ceYi%2FdDscM%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=4NKFuNOqzU2TEBhNoxHpeF0GfMU%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2FAI%E7%9F%AD%E5%89%A7%2FAI%E7%9F%AD%E5%89%A7-%E7%9C%9F%E4%BA%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=i09vsbl0OeR4VzUo56ogulpz4RY%3D"
     ],
     "体育运动": [
-      "96/谷歌veo/体育运动/体育运动--举重--简单.mp4",
-      "96/谷歌veo/体育运动/体育运动-举重--困难.mp4",
-      "96/谷歌veo/体育运动/体育运动--篮球-简单.mp4",
-      "96/谷歌veo/体育运动/体育运动-篮球--困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8--%E4%B8%BE%E9%87%8D--%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=BXp%2B4n6bdacd4kvxsdOA7EPsACc%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E4%B8%BE%E9%87%8D--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=GP8JX3tDofTvSuCf6u0mwRXMBqM%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8--%E7%AF%AE%E7%90%83-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=jxdpBSqQvNX%2BTyfid6fw2iSfFkQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8%2F%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8-%E7%AF%AE%E7%90%83--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=9W2Xc8gycocDWbUaVPphyfxzQQM%3D"
     ],
     "广告": [
-      "96/谷歌veo/广告/广告-汽车-简单.mp4",
-      "96/谷歌veo/广告/广告-汽车-困难.mp4",
-      "96/谷歌veo/广告/广告-饮品-简单.mp4",
-      "96/谷歌veo/广告/广告-饮品-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ngtD0aEpQ%2BxlnYVEgrY5eyRmWhU%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E6%B1%BD%E8%BD%A6-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=ejnn0oJnCQxz1x6FHENFc5VtTnY%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E9%A5%AE%E5%93%81-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=7cDu9LI2iDXw4E%2BCyTZSIs7Yygw%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E5%B9%BF%E5%91%8A%2F%E5%B9%BF%E5%91%8A-%E9%A5%AE%E5%93%81-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=5htlZud%2FwBJINA%2Bz77UcWx5aAhk%3D"
     ],
     "特效": [
-      "96/谷歌veo/特效/特效-现实场景元素-简单.mp4",
-      "96/谷歌veo/特效/特效-现实场景元素--困难.mp4",
-      "96/谷歌veo/特效/特效-电影-简单.mp4",
-      "96/谷歌veo/特效/特效--电影-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=%2Fmdg0AcmFvKqaOSkmW9fIt%2FdSe0%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%8E%B0%E5%AE%9E%E5%9C%BA%E6%99%AF%E5%85%83%E7%B4%A0--%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=fQbp8S%2BWRi56Dd1tmJoX%2FbLL4gg%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88-%E7%94%B5%E5%BD%B1-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=Xvo49YIv%2B6VUIfy4WY%2BRHDEpWTs%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%89%B9%E6%95%88%2F%E7%89%B9%E6%95%88--%E7%94%B5%E5%BD%B1-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=TVQ6orlJigqqfUQ8d2HXUu3EhSw%3D"
     ],
     "直播带货": [
-      "96/谷歌veo/直播/直播-数码-简单.mp4",
-      "96/谷歌veo/直播/直播-数码-困难.mp4",
-      "96/谷歌veo/直播/直播-美妆-简单.mp4",
-      "96/谷歌veo/直播/直播-美妆-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=jJlknqrs8UMfAlwEGVIFcgiRVW0%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E6%95%B0%E7%A0%81-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=HuoX9YPbjWEAXzFKYd0IM%2FEsNkY%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=JMet1OGxyuJBv%2Fx33CVcC5SfJ%2BY%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E7%9B%B4%E6%92%AD%2F%E7%9B%B4%E6%92%AD-%E7%BE%8E%E5%A6%86-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=JpIJK3BPnUc6GRv8hh6cewD%2Bqyc%3D"
     ],
     "音乐": [
-      "96/谷歌veo/音乐/音乐-mv-简单.mp4",
-      "96/谷歌veo/音乐/音乐-mv-困难.mp4",
-      "96/谷歌veo/音乐/音乐-现场-简单.mp4",
-      "96/谷歌veo/音乐/音乐-现场-困难.mp4"
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=DeR%2BhRjtITdTkKTUCtOg1tSNpV0%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-mv-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=C138bUH21oZdgvLdxOfJyQtrqSQ%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E7%AE%80%E5%8D%95.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=Ci0Kn5HixUKX9JJ7fNk9FfsayN0%3D",
+      "http://96vedio.oss-cn-beijing.aliyuncs.com/96%2F%E8%B0%B7%E6%AD%8Cveo%2F%E9%9F%B3%E4%B9%90%2F%E9%9F%B3%E4%B9%90-%E7%8E%B0%E5%9C%BA-%E5%9B%B0%E9%9A%BE.mp4?OSSAccessKeyId=LTAI5tA97rE8N4HQdWa57ppX&Expires=1812796552&Signature=XpfL5UTYWH8xN0qU%2FvaxAKJmS8U%3D"
     ]
   }
 };
