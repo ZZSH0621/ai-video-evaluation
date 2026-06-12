@@ -2384,7 +2384,7 @@ function createVideoCard(entry){
   card.innerHTML =
     '<div class="video-frame">' +
       '<span class="video-model-badge" style="background:' + (entry.color || MODEL_COLORS[MODELS.indexOf(entry.model)]) + '">' + entry.model + '</span>' +
-      '<video src="' + entry.src + '" muted playsinline preload="metadata" loop' +
+      '<video src="' + entry.src + '" muted playsinline preload="none" loop' +
              ' onmouseenter="this.setAttribute(\'controls\',\'\')"' +
              ' onmouseleave="this.removeAttribute(\'controls\')">' +
       '</video>' +
