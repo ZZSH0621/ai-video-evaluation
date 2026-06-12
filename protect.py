@@ -12,6 +12,12 @@ SKIP_OVERLAY = True   # True=休眠赛博加载动画, False=启用
 with open(html_path, 'r', encoding='utf-8') as f:
     html = f.read()
 
+# 防止重复处理：已混淆的 HTML 不再处理
+if '<!-- PROTECT_PROCESSED -->' in html:
+    print('ERROR: This HTML has already been processed by protect.py.')
+    print('Restore clean index.html from git first, then re-run.')
+    exit(1)
+
 # ============================================================
 # STEP 1: Inject anti-copy protection BEFORE main script
 # ============================================================
@@ -383,6 +389,9 @@ print(f'Obfuscated: {len(js_code)} -> {len(obf_js)} chars')
 
 # Replace main script with obfuscated version
 new_html = html[:js_start] + '\n' + obf_js + '\n' + html[script_end - len('</script>'):]
+
+# Add sentinel to prevent double-processing
+new_html = new_html.replace('<!DOCTYPE html>', '<!DOCTYPE html>\n<!-- PROTECT_PROCESSED -->', 1)
 
 with open(html_path, 'w', encoding='utf-8') as f:
     f.write(new_html)
