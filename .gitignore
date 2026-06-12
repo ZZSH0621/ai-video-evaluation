@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp files
+video_map_output.txt
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
