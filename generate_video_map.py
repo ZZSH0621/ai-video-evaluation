@@ -194,10 +194,11 @@ def scan_videos():
                     error_count += 1
                     continue
 
-                # Build absolute file:// URL (encode spaces/special chars)
+                # Build relative path from BASE_DIR (works for both local and web)
                 abs_path = os.path.abspath(os.path.join(scenario_path, mp4_file))
-                # Use urllib to properly encode the path
-                file_url = "file:///" + urllib.parse.quote(abs_path.replace("\\", "/"), safe="/:")
+                rel_path = os.path.relpath(abs_path, BASE_DIR).replace("\\", "/")
+                # Only encode spaces - Chinese chars and other unicode are fine in modern browsers
+                file_url = rel_path.replace(" ", "%20")
 
                 video_map[model_name][scenario_name][case_idx] = file_url
                 file_count += 1
