@@ -10,3 +10,6 @@ video_map_output.txt
 # OS
 .DS_Store
 Thumbs.db
+
+# Local Netlify folder
+.netlify
