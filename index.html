@@ -368,7 +368,7 @@ body::after{
   max-height:0;overflow:hidden;
   transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);
 }
-.info-panel-wrapper.open{max-height:1400px}
+.info-panel-wrapper.open{max-height:4000px}
 
 .info-panel{
   margin:0 20px 12px;
@@ -479,6 +479,39 @@ body::after{
   border:1px solid #fde68a;border-radius:10px;
 }
 .info-lineage-summary b{color:#92400e}
+
+.info-lineage-methods{margin-bottom:14px}
+.info-lineage-methods .ll-methods-title{font-size:12px;font-weight:700;color:#374151;margin-bottom:12px}
+.info-lineage-methods-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px;
+}
+.info-lineage-method-card{
+  background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px;
+}
+.info-lineage-method-card .lmc-label{
+  display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;
+  margin-bottom:8px;letter-spacing:0.5px;
+}
+.info-lineage-method-card .lmc-question{font-size:11px;color:#6b7280;margin-bottom:10px;line-height:1.5}
+.info-lineage-method-card .lmc-formula{
+  font-family:'Cascadia Code','Fira Code','Consolas',monospace;
+  font-size:10px;color:#374151;line-height:1.65;
+  background:#f8f9fb;border:1px solid #eef0f2;border-radius:6px;
+  padding:8px 10px;margin-bottom:8px;white-space:pre-wrap;word-break:break-all;
+}
+.info-lineage-method-card .lmc-pros{font-size:10px;color:#059669}
+.info-lineage-method-card .lmc-cons{font-size:10px;color:#dc2626}
+.info-lineage-method-card .lmc-map{font-size:10px;color:#6b7280;margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0}
+
+.info-lineage-coverage{
+  font-size:11px;color:#4b5563;line-height:1.9;
+  padding:12px 16px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;
+}
+.info-lineage-coverage b{color:#0369a1}
+.info-lineage-coverage code{
+  font-family:'Cascadia Code','Fira Code','Consolas',monospace;
+  font-size:10px;background:#e0f2fe;color:#0c4a6e;padding:1px 5px;border-radius:3px;
+}
 
 @media(max-width:768px){
   .info-grid{grid-template-columns:1fr}
@@ -798,6 +831,62 @@ body::after{
 聚合函数 = SUM / AVG                     聚合函数 = AVG (4 条用例)
 钻取路径 = 年 → 季 → 月 → 日              钻取路径 = 模型 → 场景 → 维度 → 用例</pre>
         <div class="ll-compare-note">相同的 OLAP 数据结构、相同的交叉表热力图范式、相同的切片下钻交互——BI 思想在 AI 评测领域的自然下沉</div>
+      </div>
+
+      <!-- Methods: AVG vs SBS vs GSB -->
+      <div class="info-lineage-methods">
+        <div class="ll-methods-title">🔬 三种聚合哲学：同一张表，不同的"怎么看"</div>
+        <div class="info-lineage-methods-grid">
+          <!-- AVG -->
+          <div class="info-lineage-method-card">
+            <span class="lmc-label" style="background:#fef3c7;color:#92400e">AVG 均值聚合</span>
+            <div class="lmc-question">"平均水平是多少？"</div>
+            <div class="lmc-formula">avg = (4.2+3.1+3.0+3.3) / 4 = 3.40
+→ 一个数字概括全局
+→ 信息压缩到极致</div>
+            <div class="lmc-pros">✅ 瞬间理解 · N模型天然扩展</div>
+            <div class="lmc-cons">❌ 完全抹掉方差：[5,5,1,1] 和 [3,3,3,3] 均值一样</div>
+            <div class="lmc-map">→ 对应 <b>All 模式</b>（悬浮徽章部分弥补方差）</div>
+          </div>
+
+          <!-- SBS -->
+          <div class="info-lineage-method-card">
+            <span class="lmc-label" style="background:#fce7f3;color:#9d174d">SBS 并排减法</span>
+            <div class="lmc-question">"A 比 B 好多少？"</div>
+            <div class="lmc-formula">diff = score[A] - score[B]
+→ 逐格做减法
+→ 红蓝冷暖色定胜负
+→ 每一格都有明确方向</div>
+            <div class="lmc-pros">✅ 决策友好 · 胜负分明</div>
+            <div class="lmc-cons">❌ 只能比 2 个 · 不知道绝对值</div>
+            <div class="lmc-map">→ 对应 <b>Dual 模式</b></div>
+          </div>
+
+          <!-- GSB -->
+          <div class="info-lineage-method-card">
+            <span class="lmc-label" style="background:#dbeafe;color:#1e40af">GSB 基准定标</span>
+            <div class="lmc-question">"谁达标？谁不达标？"</div>
+            <div class="lmc-formula">选一个基准模型（Benchmark）
+其他模型和它比：
+diff>+0.5 → Good   🟢
+|diff|≤0.5 → Same  🟡
+diff<−0.5 → Bad    🔴
+→ 离散三档，放弃连续值</div>
+            <div class="lmc-pros">✅ 直觉 · 天然N模型 · 及格线清晰</div>
+            <div class="lmc-cons">❌ 需要一个「基准」锚定 · 粗粒度</div>
+            <div class="lmc-map">→ 本页<b>尚未实现</b>（未来可加）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coverage -->
+      <div class="info-lineage-coverage">
+        <b>📋 本页矩阵覆盖情况：</b><br>
+        <code>Deep</code> = <b>绝对值评估</b>（不问对比，只看自己几分）<br>
+        <code>Dual</code> = <b>SBS 并排对比</b>（逐格减法，红蓝定胜负）<br>
+        <code>All</code>  = <b>AVG 均值聚合</b>（行业基线，悬浮徽章部分弥补方差）<br>
+        <code>GSB</code>  = <b>未实现</b>（需选一个模型当基准，其他模型逐格自动判定 Good / Same / Bad）<br>
+        <span style="font-size:10px;color:#6b7280">同一张交叉表，聚合函数不同 → 回答的问题完全不同。AVG 告诉你"大盘"，SBS 告诉你"胜负"，GSB 告诉你"及格线"。</span>
       </div>
 
       <!-- Summary -->
