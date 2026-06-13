@@ -9,6 +9,7 @@ html_path = r'F:\AI\新的网站\index.html'
 SKIP_PROTECT = True    # True=休眠反制(右键/键盘/录屏/水印), False=启用
 SKIP_OVERLAY = True    # True=休眠赛博加载动画, False=启用
 SKIP_OBFUSCATE = True  # True=跳过JS混淆(调试用), False=启用
+SKIP_URL_RANDOM = True   # True=休眠URL动态随机化, False=启用
 
 with open(html_path, 'r', encoding='utf-8') as f:
     html = f.read()
@@ -288,8 +289,11 @@ url_randomizer = r'''
 </script>
 '''
 
-html = html[:body_close] + url_randomizer + '\n' + html[body_close:]
-print('Step 1c: URL cryptic channel effect injected')
+if not SKIP_URL_RANDOM:
+    html = html[:body_close] + url_randomizer + '\n' + html[body_close:]
+    print('Step 1c: URL cryptic channel effect injected')
+else:
+    print('Step 1c: URL random DORMANT (SKIP_URL_RANDOM=True)')
 
 # ============================================================
 # STEP 2: Base64-encode Worker proxy URLs (bypass GitHub scanner)

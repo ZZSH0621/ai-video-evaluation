@@ -350,6 +350,86 @@ body::after{
 }
 #dual-selectors select:hover{border-color:var(--border-neon)}
 
+/* ========== HEATMAP INFO PANEL ========== */
+.heatmap-info-btn{
+  padding:8px 16px;border:1px solid var(--border-glass);border-radius:20px;
+  background:rgba(255,255,255,0.04);color:var(--text-muted);font-size:13px;
+  cursor:pointer;transition:all var(--transition-speed);letter-spacing:1px;
+  font-family:inherit;margin-left:4px;
+}
+.heatmap-info-btn:hover{background:rgba(255,255,255,0.08);color:#fff}
+.heatmap-info-btn.active{
+  border-color:rgba(64,224,208,0.5);color:#40e0d0;
+  background:rgba(64,224,208,0.08);
+  box-shadow:0 0 10px rgba(64,224,208,0.15);
+}
+
+.info-panel-wrapper{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.info-panel-wrapper.open{max-height:1400px}
+
+.info-panel{
+  margin:0 20px 12px;
+  background:var(--bg-card);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid var(--border-glass);border-radius:14px;
+  padding:24px 28px 20px;
+}
+.info-panel-header{
+  display:flex;align-items:center;gap:10px;margin-bottom:20px;
+  padding-bottom:14px;border-bottom:1px solid var(--border-glass);
+}
+.info-panel-header .info-icon{font-size:22px}
+.info-panel-header h3{font-size:16px;font-weight:600;letter-spacing:1px}
+.info-panel-header .info-subtitle{font-size:11px;color:var(--text-muted);margin-left:auto}
+
+.info-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+}
+.info-mode-card{
+  background:rgba(255,255,255,0.02);border:1px solid var(--border-glass);
+  border-radius:12px;padding:18px;transition:all 0.3s;
+}
+.info-mode-card:hover{border-color:var(--border-neon);background:rgba(255,255,255,0.04)}
+.info-mode-card .imc-icon{font-size:28px;margin-bottom:10px;display:block}
+.info-mode-card .imc-title{font-size:15px;font-weight:700;margin-bottom:6px;letter-spacing:1px}
+.info-mode-card .imc-subtitle{font-size:11px;color:var(--text-muted);margin-bottom:14px;line-height:1.5}
+.info-mode-card .imc-rule{
+  font-size:11px;color:var(--text-secondary);line-height:1.7;
+  padding:10px 12px;background:rgba(0,0,0,0.2);border-radius:8px;
+  margin-bottom:10px;
+}
+.info-mode-card .imc-rule code{
+  font-family:'Cascadia Code','Fira Code','Consolas',monospace;
+  font-size:10px;background:rgba(52,152,219,0.1);color:#5dade2;
+  padding:1px 5px;border-radius:3px;
+}
+.info-mode-card .imc-swatch{
+  display:flex;align-items:center;gap:6px;margin-top:8px;flex-wrap:wrap;
+}
+.info-mode-card .imc-swatch-dot{
+  width:14px;height:14px;border-radius:3px;flex-shrink:0;
+}
+.info-mode-card .imc-swatch-label{font-size:10px;color:var(--text-muted)}
+
+.info-footer{
+  margin-top:16px;padding-top:12px;border-top:1px solid var(--border-glass);
+  font-size:11px;color:var(--text-muted);line-height:1.7;
+  display:flex;align-items:flex-start;gap:8px;
+}
+.info-footer .info-footer-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.info-footer code{
+  font-family:'Cascadia Code','Fira Code','Consolas',monospace;
+  font-size:10px;background:rgba(64,224,208,0.1);color:#40e0d0;
+  padding:1px 5px;border-radius:3px;
+}
+
+@media(max-width:768px){
+  .info-grid{grid-template-columns:1fr}
+  .info-panel{margin:0 10px 8px;padding:16px}
+}
+
 /* ========== DRILL SECTION ========== */
 .drill-section .drill-chart-box{
   background:var(--bg-card);backdrop-filter:blur(8px);
@@ -516,10 +596,98 @@ body::after{
   <button class="mode-btn active" data-mode="deep" onclick="setMode('deep')">🔍 单模型深挖</button>
   <button class="mode-btn" data-mode="dual" onclick="setMode('dual')">⚔️ 双模型对比</button>
   <button class="mode-btn" data-mode="all" onclick="setMode('all')">📊 全模型对比</button>
+  <button class="heatmap-info-btn" onclick="toggleHeatmapInfo()" id="heatmap-info-btn">📖 热力矩阵原理</button>
   <span id="dual-selectors" style="display:none">
     模型A: <select id="dual-a" onchange="onDualChange()"></select>
     模型B: <select id="dual-b" onchange="onDualChange()"></select>
   </span>
+</div>
+
+<!-- HEATMAP INFO PANEL -->
+<div class="info-panel-wrapper" id="info-panel-wrapper">
+  <div class="info-panel">
+    <div class="info-panel-header">
+      <span class="info-icon">📖</span>
+      <h3>维度热力矩阵 · 原理说明</h3>
+      <span class="info-subtitle">三种模式的设计逻辑与颜色规则</span>
+    </div>
+    <div class="info-grid">
+      <!-- Deep -->
+      <div class="info-mode-card">
+        <span class="imc-icon">🔍</span>
+        <div class="imc-title">单模型深挖</div>
+        <div class="imc-subtitle">深入一个模型，看它在每个维度和场景下的绝对表现</div>
+        <div class="imc-rule">
+          <div style="margin-bottom:6px;font-weight:600;color:#e0e6f0">🎨 颜色 = 分数映射</div>
+          <code>hue = ((score - 1) / 4) × 120°</code><br>
+          <div class="imc-swatch">
+            <span class="imc-swatch-dot" style="background:hsl(0,65%,48%)"></span><span class="imc-swatch-label">1分 红</span>
+            <span class="imc-swatch-dot" style="background:hsl(30,65%,48%)"></span>
+            <span class="imc-swatch-dot" style="background:hsl(60,65%,48%)"></span><span class="imc-swatch-label">3分 黄</span>
+            <span class="imc-swatch-dot" style="background:hsl(90,65%,48%)"></span>
+            <span class="imc-swatch-dot" style="background:hsl(120,65%,48%)"></span><span class="imc-swatch-label">5分 绿</span>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-muted)">红=差 → 黄=中 → 绿=好</div>
+        </div>
+        <div class="imc-rule">
+          <div style="margin-bottom:6px;font-weight:600;color:#e0e6f0">🔢 显示值</div>
+          格内数字 = 该模型在该维度+场景下的 <b>4条用例均值</b>（1-5分）
+        </div>
+      </div>
+
+      <!-- Dual -->
+      <div class="info-mode-card">
+        <span class="imc-icon">⚔️</span>
+        <div class="imc-title">双模型对比</div>
+        <div class="imc-subtitle">逐格做减法，用红蓝冷暖色直观表达优劣方向</div>
+        <div class="imc-rule">
+          <div style="margin-bottom:6px;font-weight:600;color:#e0e6f0">🎨 颜色 = 差值驱动</div>
+          <code>diff = score<sub>A</sub> − score<sub>B</sub></code><br>
+          <code>intensity = min(1, |diff| / 3) × 0.7</code><br>
+          <div class="imc-swatch" style="margin-top:6px">
+            <span class="imc-swatch-dot" style="background:#e74c3c"></span><span class="imc-swatch-label">A更强(+3)</span>
+            <span class="imc-swatch-dot" style="background:#2a2a3a"></span><span class="imc-swatch-label">打平(0)</span>
+            <span class="imc-swatch-dot" style="background:#3498db"></span><span class="imc-swatch-label">B更强(−3)</span>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-muted)">红色优势=模型A领先 · 蓝色优势=模型B领先<br>差距＜3分渐进加深，≥3分达满饱和度</div>
+        </div>
+        <div class="imc-rule">
+          <div style="margin-bottom:6px;font-weight:600;color:#e0e6f0">🔢 显示值</div>
+          格内数字 = <code>+1.23</code> 或 <code>−0.87</code>（带符号差值）<br>
+          <span style="font-size:10px;color:var(--text-muted)">悬浮可看两模型原始分数</span>
+        </div>
+      </div>
+
+      <!-- All -->
+      <div class="info-mode-card">
+        <span class="imc-icon">📊</span>
+        <div class="imc-title">全模型对比</div>
+        <div class="imc-subtitle">取所有模型分数的算术平均，代表行业基线水平</div>
+        <div class="imc-rule">
+          <div style="margin-bottom:6px;font-weight:600;color:#e0e6f0">🎨 颜色 = 均值映射</div>
+          <code>avg = Σ scores / N</code>（N=有效模型数，剔除null）<br>
+          配色规则<b>同 Deep 模式</b>：<code>hue = ((avg-1)/4)×120°</code>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-muted)">红=行业短板 · 黄=行业平均 · 绿=行业领先</div>
+        </div>
+        <div class="imc-rule">
+          <div style="margin-bottom:6px;font-weight:600;color:#e0e6f0">🔢 显示值</div>
+          格内数字 = 所有模型在该格子的<b>平均分</b><br>
+          <span style="font-size:10px;color:var(--text-muted)">悬浮可看每个模型的独立分数徽章</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shared: Weight system -->
+    <div class="info-footer">
+      <span class="info-footer-icon">💧</span>
+      <div>
+        <b style="color:#40e0d0">青色水位 = 权重指示</b>（三种模式共用）<br>
+        高度公式：<code>fillPct = (weight / 15) × 100%</code>，15 为最大可能权重。<br>
+        权重 ≥15：<b style="color:#f1c40f">★★★ 核心维度</b> · 权重 ≥10：<b style="color:#3498db">★★ 重要维度</b> · 权重 ＜10：<b style="color:#7888a4">★ 辅助维度</b><br>
+        水面有 SVG 动态波纹 + 表面光泽流动线，模拟真实液体晃动效果。
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- MAIN WRAPPER -->
@@ -1044,6 +1212,13 @@ function onDualChange(){
   state.dualA = parseInt(document.getElementById('dual-a').value)||0;
   state.dualB = parseInt(document.getElementById('dual-b').value)||1;
   if(state.mode==='dual') refreshAll();
+}
+
+function toggleHeatmapInfo(){
+  const wrapper = document.getElementById('info-panel-wrapper');
+  const btn = document.getElementById('heatmap-info-btn');
+  const isOpen = wrapper.classList.toggle('open');
+  btn.classList.toggle('active', isOpen);
 }
 
 // ============================================================

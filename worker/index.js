@@ -215,7 +215,6 @@ function generateOssSignedUrl(accessKeyId, accessKeySecret, bucket, endpoint, ob
   const verb = 'GET';
   const contentMD5 = '';
   const contentType = '';
-  const date = ''; // Expires-based, no Date header
   const expiresTimestamp = Math.floor(Date.now() / 1000) + expires;
 
   // Canonicalized OSS headers (none for basic GET)
@@ -229,14 +228,15 @@ function generateOssSignedUrl(accessKeyId, accessKeySecret, bucket, endpoint, ob
   // Canonicalized resource: /bucket/object (path NOT URL-encoded for signing)
   const canonicalResource = '/' + bucket + normalizedPath;
 
-  // String to sign (uses raw path, not URL-encoded)
+  // String to sign (Expires timestamp as Date field for query-string auth)
+  // CRITICAL: canonicalized resource includes bucket prefix; ossHeaders + resource
+  // are combined into ONE element (no extra \n when ossHeaders is empty)
   const stringToSign = [
     verb,
     contentMD5,
     contentType,
-    date,
-    ossHeaders,
-    canonicalResource
+    String(expiresTimestamp),
+    ossHeaders + canonicalResource
   ].join('\n');
 
   // Sign with HMAC-SHA1
@@ -338,33 +338,46 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    // CORS headers for ALL responses (debug + preflight)
+    const corsHeaders = {
+      'Access-Control-Allow-Origin': 'https://zzsh0621.github.io',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Max-Age': '86400',
+    };
+
+    // Handle OPTIONS preflight
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { status: 204, headers: corsHeaders });
+    }
+
     // ---- 1. 解析路由 & 查找 OSS 路径 ----
     const ossPath = resolveOssPath(url.pathname);
     if (!ossPath) {
-      return new Response('Not Found', { status: 404 });
+      return new Response('Not Found', { status: 404, headers: corsHeaders });
     }
 
     // ---- 2. Referer 校验 ----
     const referer = request.headers.get('Referer') || '';
     const isAllowed = referer.includes('zzsh0621.github.io') || referer.includes('localhost');
     if (!isAllowed) {
-      return new Response('Forbidden', { status: 403 });
+      return new Response('Forbidden', { status: 403, headers: corsHeaders });
     }
 
     // ---- 3. 速率限制 ----
     const clientIP = request.headers.get('CF-Connecting-IP') || 'unknown';
     if (!checkRateLimit(clientIP)) {
-      return new Response('Too Many Requests', { status: 429 });
+      return new Response('Too Many Requests', { status: 429, headers: corsHeaders });
     }
 
     // ---- 5. 获取 OSS 凭证 (Worker Secrets) ----
-    const accessKeyId = env.OSS_ACCESS_KEY_ID;
-    const accessKeySecret = env.OSS_ACCESS_KEY_SECRET;
+    // Strip BOM and any non-printable chars that may have leaked into secrets
+    const accessKeyId = (env.OSS_ACCESS_KEY_ID || '').replace(/[^A-Za-z0-9]/g, '');
+    const accessKeySecret = (env.OSS_ACCESS_KEY_SECRET || '').replace(/[^A-Za-z0-9\/+=]/g, '');
     const bucket = env.OSS_BUCKET || '96vedio';
     const endpoint = env.OSS_ENDPOINT || 'oss-cn-beijing.aliyuncs.com';
 
     if (!accessKeyId || !accessKeySecret) {
-      return new Response('Server Configuration Error', { status: 500 });
+      return new Response('Server Config: OSS keys not set', { status: 500, headers: corsHeaders });
     }
 
     // ---- 6. 生成签名 URL (10 分钟有效) ----
@@ -375,7 +388,7 @@ export default {
         accessKeyId, accessKeySecret, bucket, endpoint, ossPath, expires
       );
     } catch (e) {
-      return new Response('Signature Generation Error', { status: 500 });
+      return new Response('Signature Error: ' + e.message, { status: 500, headers: corsHeaders });
     }
 
     // ---- 7. 302 跳转 ----
